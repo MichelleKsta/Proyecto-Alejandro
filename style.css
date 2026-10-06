@@ -1,0 +1,736 @@
+/* =========================
+   CONFIGURACIÓN GENERAL
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #f1e9d8;
+    color: #1c1b19;
+    font-family: "Montserrat", sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button,
+input,
+textarea,
+select {
+    font-family: inherit;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+    background: #f1e9d8;
+    padding: 18px 12px 12px;
+    text-align: center;
+}
+
+.logo {
+    display: block;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 30px;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+}
+
+.logo span,
+.footer-logo span {
+    color: #d83b2b;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.nav a {
+    font-size: 9px;
+    font-weight: 800;
+    padding-bottom: 5px;
+}
+
+.nav a.activo {
+    border-bottom: 2px solid #d83b2b;
+}
+
+
+/* =========================
+   BARRA INFORMATIVA
+========================= */
+
+.barra-info {
+    background: #1c1b19;
+    color: #fff;
+    text-align: center;
+    padding: 9px 4px;
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+
+/* =========================
+   CONTENEDOR
+========================= */
+
+main {
+    width: 100%;
+}
+
+
+/* =========================
+   DISCO DEL MES
+========================= */
+
+.disco-principal {
+    padding: 42px 12px 20px;
+}
+
+.portada-tinto {
+    width: 100%;
+    max-width: 310px;
+    aspect-ratio: 1 / 1;
+    margin: 0 auto 35px;
+    background: #db3b2b;
+    border: 1px solid #1c1b19;
+    position: relative;
+    overflow: hidden;
+}
+
+.portada-titulo {
+    position: absolute;
+    top: 18px;
+    left: 15px;
+    color: #fff;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 32px;
+    line-height: .9;
+}
+
+.circulo-portada {
+    width: 145px;
+    height: 145px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, .2);
+    position: absolute;
+    right: -30px;
+    bottom: 15px;
+}
+
+.portada-artista {
+    position: absolute;
+    bottom: 13px;
+    left: 15px;
+    color: white;
+    font-size: 8px;
+    font-weight: 800;
+}
+
+
+/* INFORMACIÓN DEL DISCO */
+
+.informacion-disco {
+    width: 100%;
+}
+
+.etiqueta {
+    color: #d83b2b;
+    font-size: 8px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    margin-bottom: 8px;
+}
+
+.informacion-disco h1 {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 38px;
+    line-height: .9;
+}
+
+.informacion-disco h2 {
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.precio {
+    color: #d83b2b;
+    font-size: 28px;
+    font-weight: 800;
+    margin: 24px 0;
+}
+
+.descripcion {
+    font-size: 10px;
+    line-height: 1.7;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+
+/* BOTÓN */
+
+.boton {
+    background: #1c1b19;
+    color: #fff;
+    border: none;
+    padding: 11px 17px;
+    font-size: 9px;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.boton:hover {
+    background: #d83b2b;
+}
+
+
+/* DATOS DEL DISCO */
+
+.datos-disco {
+    margin-top: 18px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border: 1px solid #1c1b19;
+}
+
+.datos-disco div {
+    min-height: 50px;
+    padding: 9px;
+    border-right: 1px solid #1c1b19;
+    border-bottom: 1px solid #1c1b19;
+}
+
+.datos-disco div:nth-child(2n) {
+    border-right: none;
+}
+
+.datos-disco div:nth-child(3),
+.datos-disco div:nth-child(4) {
+    border-bottom: none;
+}
+
+.datos-disco span {
+    display: block;
+    font-size: 6px;
+    margin-bottom: 5px;
+}
+
+.datos-disco strong {
+    font-size: 8px;
+}
+
+
+/* =========================
+   CANCIONES
+========================= */
+
+.canciones {
+    padding: 0 12px 40px;
+}
+
+.lado {
+    margin-top: 15px;
+}
+
+.lado h2 {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.cancion {
+    display: grid;
+    grid-template-columns: 25px 1fr 40px;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd2bf;
+    font-size: 8px;
+    font-weight: 700;
+}
+
+.numero {
+    color: #d83b2b;
+}
+
+.duracion {
+    text-align: right;
+}
+
+
+/* =========================
+   RECOMENDADOS
+========================= */
+
+.recomendados {
+    border-top: 2px solid #292622;
+    padding: 38px 12px;
+}
+
+.recomendados > h2 {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.productos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px 12px;
+}
+
+.mini-portada {
+    aspect-ratio: 1 / 1;
+    border: 1px solid #1c1b19;
+    padding: 8px;
+    position: relative;
+    overflow: hidden;
+}
+
+.mini-portada strong {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 12px;
+}
+
+.mini-portada::after {
+    content: "";
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    position: absolute;
+    right: -20px;
+    bottom: -10px;
+    background: rgba(255,255,255,.18);
+}
+
+.roja {
+    background: #db3b2b;
+    color: white;
+}
+
+.negra {
+    background: #242320;
+    color: white;
+}
+
+.beige {
+    background: #e5dac4;
+    color: #1c1b19;
+}
+
+.azul {
+    background: #315486;
+    color: white;
+}
+
+.producto h3 {
+    font-size: 8px;
+    margin-top: 7px;
+}
+
+.producto p {
+    font-size: 7px;
+    margin: 3px 0;
+}
+
+.producto > strong {
+    font-size: 8px;
+}
+
+
+/* =========================
+   CONTACTO
+========================= */
+
+.contacto-intro {
+    padding: 48px 15px 32px;
+    border-bottom: 2px solid #292622;
+}
+
+.contacto-intro h1 {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 48px;
+    line-height: .9;
+}
+
+.contacto-intro p {
+    font-size: 13px;
+    line-height: 1.6;
+    font-weight: 600;
+    max-width: 300px;
+    margin-top: 5px;
+}
+
+
+/* =========================
+   FORMULARIO
+========================= */
+
+.formulario-seccion {
+    padding: 52px 15px 45px;
+}
+
+.formulario-seccion form {
+    display: flex;
+    flex-direction: column;
+}
+
+.formulario-seccion label {
+    font-size: 8px;
+    font-weight: 800;
+    margin-bottom: 7px;
+    margin-top: 20px;
+}
+
+.formulario-seccion label:first-child {
+    margin-top: 0;
+}
+
+.formulario-seccion input,
+.formulario-seccion select,
+.formulario-seccion textarea {
+    width: 100%;
+    background: transparent;
+    border: 1px solid #1c1b19;
+    padding: 11px;
+    font-size: 11px;
+    outline: none;
+}
+
+.formulario-seccion input,
+.formulario-seccion select {
+    height: 35px;
+}
+
+.formulario-seccion textarea {
+    height: 105px;
+    resize: vertical;
+}
+
+.formulario-seccion .boton {
+    width: 80px;
+    margin-top: 17px;
+}
+
+
+/* =========================
+   MAPA
+========================= */
+
+.ubicacion {
+    padding: 0 15px 50px;
+}
+
+.mapa {
+    height: 195px;
+    width: 100%;
+    border: 1px solid #1c1b19;
+    background-color: #e7dcc7;
+    position: relative;
+    overflow: hidden;
+
+    background-image:
+        linear-gradient(90deg, transparent 93%, #f4eddf 93%),
+        linear-gradient(0deg, transparent 93%, #f4eddf 93%);
+    background-size: 25px 25px;
+}
+
+.calle-horizontal {
+    position: absolute;
+    width: 100%;
+    height: 12px;
+    top: 48%;
+    background: #fffaf0;
+}
+
+.calle-vertical {
+    position: absolute;
+    width: 12px;
+    height: 100%;
+    left: 48%;
+    background: #fffaf0;
+}
+
+.marcador {
+    position: absolute;
+    top: 48%;
+    left: 42%;
+    transform: translateY(-100%);
+    background: #d83b2b;
+    color: white;
+    padding: 5px 12px;
+    font-size: 7px;
+    font-weight: 800;
+}
+
+.pin {
+    width: 14px;
+    height: 14px;
+    background: #d83b2b;
+    border: 2px solid #1c1b19;
+    border-radius: 50%;
+    position: absolute;
+    top: 48%;
+    left: 48%;
+    transform: translate(-50%, -50%);
+}
+
+.nombre-calle {
+    position: absolute;
+    top: 45%;
+    left: 5px;
+    font-size: 6px;
+}
+
+
+/* DIRECCIÓN */
+
+.direccion {
+    margin-top: 25px;
+}
+
+.direccion h2,
+.horario h2 {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 24px;
+    margin-bottom: 7px;
+}
+
+.direccion p {
+    font-size: 10px;
+    font-weight: 600;
+    line-height: 1.7;
+}
+
+
+/* HORARIO */
+
+.horario {
+    margin-top: 22px;
+}
+
+.horario-fila {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px dashed #aaa;
+    font-size: 9px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    background: #1c1b19;
+    color: #fff;
+    padding: 42px 12px 25px;
+}
+
+.footer-logo {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 42px;
+}
+
+.footer p {
+    font-size: 9px;
+    font-weight: 600;
+    margin-top: 7px;
+}
+
+.footer-columnas {
+    margin-top: 35px;
+}
+
+.footer-columnas > div {
+    margin-bottom: 30px;
+}
+
+.footer-columnas h3 {
+    color: #d9a900;
+    font-size: 8px;
+    letter-spacing: 2px;
+    margin-bottom: 13px;
+}
+
+.footer-columnas a {
+    display: block;
+    font-size: 9px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.copyright {
+    border-top: 1px solid #4b4843;
+    padding-top: 15px;
+    margin-top: 15px;
+    font-size: 7px;
+    line-height: 2;
+}
+
+
+/* =========================
+   ESCRITORIO
+========================= */
+
+@media (min-width: 768px) {
+
+    .header {
+        padding: 25px 40px 15px;
+    }
+
+    .logo {
+        font-size: 38px;
+    }
+
+    .nav {
+        gap: 25px;
+    }
+
+    .nav a {
+        font-size: 11px;
+    }
+
+    .barra-info {
+        font-size: 10px;
+        padding: 11px;
+    }
+
+
+    /* DISCO */
+
+    .disco-principal {
+        max-width: 1100px;
+        margin: auto;
+        padding: 70px 40px 50px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 70px;
+        align-items: center;
+    }
+
+    .portada-tinto {
+        max-width: 500px;
+        margin: 0;
+    }
+
+    .portada-titulo {
+        font-size: 50px;
+    }
+
+    .circulo-portada {
+        width: 210px;
+        height: 210px;
+    }
+
+    .informacion-disco h1 {
+        font-size: 58px;
+    }
+
+    .informacion-disco h2 {
+        font-size: 16px;
+    }
+
+    .precio {
+        font-size: 40px;
+    }
+
+    .descripcion {
+        font-size: 12px;
+        max-width: 500px;
+    }
+
+    .canciones {
+        max-width: 1100px;
+        margin: auto;
+        padding: 20px 40px 70px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 70px;
+    }
+
+    .cancion {
+        font-size: 10px;
+    }
+
+    .recomendados {
+        padding: 60px 40px;
+    }
+
+    .recomendados > h2 {
+        max-width: 1100px;
+        margin: 0 auto 25px;
+        font-size: 35px;
+    }
+
+    .productos {
+        max-width: 1100px;
+        margin: auto;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+
+    /* CONTACTO */
+
+    .contacto-intro {
+        padding: 80px max(40px, calc((100% - 1100px) / 2));
+    }
+
+    .contacto-intro h1 {
+        font-size: 70px;
+    }
+
+    .contacto-intro p {
+        font-size: 16px;
+    }
+
+    .formulario-seccion {
+        max-width: 1100px;
+        margin: auto;
+        padding: 70px 40px;
+    }
+
+    .formulario-seccion input,
+    .formulario-seccion select,
+    .formulario-seccion textarea {
+        max-width: 600px;
+    }
+
+    .ubicacion {
+        max-width: 1100px;
+        margin: auto;
+        padding: 20px 40px 80px;
+    }
+
+    .mapa {
+        height: 300px;
+    }
+
+
+    /* FOOTER */
+
+    .footer {
+        padding: 60px max(40px, calc((100% - 1100px) / 2));
+    }
+
+    .footer-columnas {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+    }
+
+}
