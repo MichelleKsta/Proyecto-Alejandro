@@ -1,0 +1,781 @@
+/* ================================
+   VARIABLES
+================================ */
+
+:root {
+    --cream: #f2eadb;
+    --black: #1c1b19;
+    --red: #df3927;
+    --yellow: #e7aa22;
+    --green: #2f6258;
+    --gray: #625e58;
+    --border: #1c1b19;
+}
+
+
+/* ================================
+   RESET
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--cream);
+    color: var(--black);
+    font-family: "Montserrat", Arial, sans-serif;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.container {
+    width: min(1120px, calc(100% - 80px));
+    margin: 0 auto;
+}
+
+
+/* ================================
+   NAVBAR
+================================ */
+
+.header {
+    background: var(--cream);
+}
+
+.navbar {
+    height: 74px;
+    width: min(1120px, calc(100% - 80px));
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo,
+.footer-logo {
+    font-family: "Bebas Neue", Impact, sans-serif;
+    font-size: 31px;
+    letter-spacing: -1px;
+    line-height: 1;
+}
+
+.logo span,
+.footer-logo span {
+    color: var(--red);
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.menu a {
+    position: relative;
+
+    font-size: 12px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.menu a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+
+    width: 0;
+    height: 2px;
+
+    background: var(--red);
+
+    transition: width .25s ease;
+}
+
+.menu a:hover::after,
+.menu a.active::after {
+    width: 100%;
+}
+
+
+/* ================================
+   FRANJA SUPERIOR
+================================ */
+
+.announcement {
+    min-height: 33px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 8px 20px;
+
+    background: var(--black);
+    color: white;
+
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+
+/* ================================
+   HERO
+================================ */
+
+.hero {
+    border-bottom: 1px solid var(--black);
+}
+
+.hero .container {
+    padding-top: 50px;
+    padding-bottom: 32px;
+}
+
+.hero h1 {
+    font-family: "Bebas Neue", Impact, sans-serif;
+
+    font-size: clamp(70px, 8vw, 100px);
+    line-height: .9;
+
+    letter-spacing: -1px;
+}
+
+.hero p {
+    max-width: 500px;
+
+    margin-top: 8px;
+
+    color: var(--gray);
+
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.6;
+}
+
+
+/* ================================
+   HISTORIA
+================================ */
+
+.history {
+    padding: 62px 0 48px;
+}
+
+.history-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 85px;
+}
+
+.history-title h2 {
+    max-width: 500px;
+
+    font-size: 23px;
+    line-height: 1.4;
+    font-weight: 800;
+}
+
+.history-text {
+    font-size: 13px;
+    line-height: 1.6;
+    font-weight: 700;
+}
+
+.history-text p + p {
+    margin-top: 18px;
+}
+
+
+/* ================================
+   ESTADÍSTICAS
+================================ */
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+
+.stat {
+    min-height: 150px;
+
+    padding: 32px 16px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    border-right: 1px solid var(--border);
+}
+
+.stat:last-child {
+    border-right: none;
+}
+
+.stat strong {
+    color: var(--red);
+
+    font-family: "Bebas Neue", Impact, sans-serif;
+    font-size: 58px;
+    line-height: .9;
+}
+
+.stat strong small {
+    font-size: 28px;
+}
+
+.stat span {
+    margin-top: 15px;
+
+    font-size: 12px;
+    font-weight: 800;
+}
+
+
+/* ================================
+   EQUIPO
+================================ */
+
+.team {
+    padding-top: 55px;
+    padding-bottom: 57px;
+}
+
+.section-title {
+    margin-bottom: 28px;
+
+    font-family: "Bebas Neue", Impact, sans-serif;
+    font-size: 43px;
+    line-height: 1;
+}
+
+.people {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.person {
+    min-height: 245px;
+
+    padding: 22px;
+
+    border: 2px solid var(--border);
+}
+
+.avatar {
+    width: 74px;
+    height: 74px;
+
+    margin-bottom: 14px;
+
+    border-radius: 50%;
+    border: 1.5px solid var(--black);
+
+    position: relative;
+    overflow: hidden;
+}
+
+.avatar-head {
+    position: absolute;
+
+    width: 25px;
+    height: 25px;
+
+    top: 11px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    border-radius: 50%;
+
+    background: #efa29a;
+}
+
+.avatar-body {
+    position: absolute;
+
+    width: 50px;
+    height: 32px;
+
+    bottom: -2px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    border-radius: 50% 50% 0 0;
+
+    background: #efa29a;
+}
+
+.avatar-red {
+    background: var(--red);
+}
+
+.avatar-yellow {
+    background: var(--yellow);
+}
+
+.avatar-green {
+    background: var(--green);
+}
+
+.avatar-yellow .avatar-head,
+.avatar-yellow .avatar-body {
+    background: #f5d37c;
+}
+
+.avatar-green .avatar-head,
+.avatar-green .avatar-body {
+    background: #9bc2ba;
+}
+
+.person h3 {
+    font-family: "Bebas Neue", Impact, sans-serif;
+    font-size: 24px;
+    line-height: 1;
+}
+
+.role {
+    margin-top: 5px;
+
+    color: var(--gray);
+
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.recommendation {
+    margin-top: 17px;
+    padding-top: 11px;
+
+    border-top: 1px dashed #888;
+}
+
+.recommendation span {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: var(--red);
+
+    font-size: 9px;
+    font-weight: 800;
+}
+
+.recommendation strong {
+    display: block;
+
+    font-size: 10px;
+    line-height: 1.4;
+}
+
+
+/* ================================
+   FOOTER
+================================ */
+
+.footer {
+    padding-top: 55px;
+
+    background: var(--black);
+    color: var(--cream);
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 45px;
+
+    padding-bottom: 42px;
+}
+
+.footer-logo {
+    margin-bottom: 18px;
+
+    color: var(--cream);
+    font-size: 56px;
+}
+
+.footer-brand p {
+    margin-top: 5px;
+
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-column h4 {
+    margin-bottom: 8px;
+
+    color: var(--yellow);
+
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+.footer-column a {
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.footer-column a:hover {
+    color: var(--red);
+}
+
+.copyright {
+    min-height: 54px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-top: 1px solid #666;
+
+    font-size: 10px;
+    font-weight: 600;
+}
+
+
+/* ================================
+   TABLET
+================================ */
+
+@media (max-width: 850px) {
+
+    .container,
+    .navbar {
+        width: min(100% - 40px, 700px);
+    }
+
+    .menu {
+        gap: 15px;
+    }
+
+    .menu a {
+        font-size: 10px;
+    }
+
+    .history-grid {
+        gap: 40px;
+    }
+
+    .people {
+        gap: 15px;
+    }
+
+    .person {
+        padding: 16px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1.5fr 1fr 1fr 1fr;
+        gap: 25px;
+    }
+}
+
+
+/* ================================
+   CELULAR
+================================ */
+
+@media (max-width: 600px) {
+
+    .container,
+    .navbar {
+        width: calc(100% - 32px);
+    }
+
+
+    /* NAV */
+
+    .navbar {
+        height: auto;
+
+        padding: 18px 0;
+
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .logo {
+        font-size: 28px;
+    }
+
+    .menu {
+        width: 100%;
+
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 13px 10px;
+    }
+
+    .menu a {
+        font-size: 9px;
+        text-align: left;
+    }
+
+    .menu a::after {
+        bottom: -5px;
+    }
+
+
+    /* BANNER */
+
+    .announcement {
+        min-height: 40px;
+
+        font-size: 8px;
+        line-height: 1.4;
+        letter-spacing: 1px;
+    }
+
+
+    /* HERO */
+
+    .hero .container {
+        padding-top: 35px;
+        padding-bottom: 28px;
+    }
+
+    .hero h1 {
+        font-size: 64px;
+    }
+
+    .hero p {
+        max-width: 280px;
+
+        font-size: 12px;
+        line-height: 1.5;
+    }
+
+
+    /* HISTORIA */
+
+    .history {
+        padding: 38px 0 35px;
+    }
+
+    .history-grid {
+        display: block;
+    }
+
+    .history-title h2 {
+        font-size: 19px;
+        line-height: 1.45;
+    }
+
+    .history-text {
+        margin-top: 30px;
+
+        font-size: 10px;
+        line-height: 1.6;
+    }
+
+    .history-text p + p {
+        margin-top: 15px;
+    }
+
+
+    /* ESTADÍSTICAS */
+
+    .stats {
+        display: block;
+    }
+
+    .stat {
+        min-height: 95px;
+
+        padding: 20px 12px;
+
+        border-right: none;
+        border-bottom: 1px solid var(--border);
+    }
+
+    .stat:last-child {
+        border-bottom: none;
+    }
+
+    .stat strong {
+        font-size: 43px;
+    }
+
+    .stat strong small {
+        font-size: 21px;
+    }
+
+    .stat span {
+        margin-top: 7px;
+
+        font-size: 9px;
+    }
+
+
+    /* EQUIPO */
+
+    .team {
+        padding-top: 38px;
+        padding-bottom: 45px;
+    }
+
+    .section-title {
+        margin-bottom: 18px;
+        font-size: 35px;
+    }
+
+    .people {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    .person {
+        min-height: 0;
+        padding: 14px;
+    }
+
+    .avatar {
+        width: 55px;
+        height: 55px;
+
+        margin-bottom: 10px;
+    }
+
+    .avatar-head {
+        width: 19px;
+        height: 19px;
+        top: 8px;
+    }
+
+    .avatar-body {
+        width: 38px;
+        height: 25px;
+    }
+
+    .person h3 {
+        font-size: 20px;
+    }
+
+    .role {
+        font-size: 9px;
+    }
+
+    .recommendation {
+        margin-top: 12px;
+        padding-top: 8px;
+    }
+
+    .recommendation span {
+        font-size: 7px;
+    }
+
+    .recommendation strong {
+        font-size: 8px;
+    }
+
+
+    /* FOOTER */
+
+    .footer {
+        padding-top: 38px;
+    }
+
+    .footer-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px 20px;
+    }
+
+    .footer-brand {
+        grid-column: 1 / -1;
+    }
+
+    .footer-logo {
+        font-size: 48px;
+        margin-bottom: 12px;
+    }
+
+    .footer-brand p {
+        font-size: 9px;
+    }
+
+    .footer-column {
+        gap: 8px;
+    }
+
+    .footer-column h4 {
+        font-size: 9px;
+        margin-bottom: 4px;
+    }
+
+    .footer-column a {
+        font-size: 9px;
+    }
+
+    .copyright {
+        min-height: 70px;
+
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 5px;
+
+        font-size: 7px;
+    }
+}
+
+
+/* ================================
+   CELULARES MUY PEQUEÑOS
+================================ */
+
+@media (max-width: 360px) {
+
+    .container,
+    .navbar {
+        width: calc(100% - 24px);
+    }
+
+    .menu {
+        gap: 10px 6px;
+    }
+
+    .menu a {
+        font-size: 8px;
+    }
+
+    .hero h1 {
+        font-size: 55px;
+    }
+
+    .history-title h2 {
+        font-size: 17px;
+    }
+
+    .section-title {
+        font-size: 31px;
+    }
+}
