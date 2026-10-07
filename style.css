@@ -591,3 +591,301 @@ a {
         font-size: 5px;
     }
 } 
+
+
+
+
+
+
+.catalogo-intro {
+    width: 100%;
+    height: 182px;
+    padding: 45px 6.3% 0;
+    border-bottom: 2px solid var(--tinta);
+}
+
+.catalogo-intro h1 {
+    font-family: "Anton", sans-serif;
+    font-size: 73px;
+    line-height: 0.95;
+    font-weight: 400;
+    letter-spacing: -1px;
+}
+
+.catalogo-intro p {
+    margin-top: 9px;
+    color: var(--gris);
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.45;
+}
+
+.catalogo-section {
+    width: 87.5%;
+    max-width: 1100px;
+    margin: 45px auto 55px;
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 35px;
+}
+
+.catalogo-filtros {
+    border-top: none;
+    transform: translateX(-50px);
+}
+
+.filtro-grupo + .filtro-grupo {
+    padding-top: 20px;
+}
+
+.filtro-grupo h2 {
+    margin-bottom: 14px;
+    font-family: "Anton", sans-serif;
+    font-size: 25px;
+    font-weight: 400;
+}
+
+.filtro-item {
+    min-height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--tinta);
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.filtro-item strong {
+    font-size: 11px;
+}
+
+.filtro-item.activo {
+    color: var(--rojo);
+    font-weight: 700;
+}
+
+.catalogo-productos {
+    min-width: 0;
+}
+
+.catalogo-barra {
+    min-height: 40px;
+    padding-bottom: 12px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    border-bottom: 2px solid var(--tinta);
+    color: var(--tinta);
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.discos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px 18px;
+    padding-top: 24px;
+}
+
+.disco-card {
+    min-width: 0;
+}
+
+.portada {
+    width: 100%;
+    aspect-ratio: 1 / 0.95;
+    padding: 0;
+    overflow: hidden;
+    border: 2px solid var(--tinta);
+}
+
+.portada img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   display: block;
+}
+
+.portada h3 {
+    font-family: "Anton", sans-serif;
+    font-size: 29px;
+    line-height: 0.95;
+    font-weight: 400;
+}
+
+.portada span {
+    margin-top: 13px;
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.portada-roja {
+    background: var(--rojo);
+    color: var(--papel);
+}
+
+.portada-verde {
+    background: #718b55;
+    color: var(--papel);
+}
+
+.portada-amarilla {
+    background: var(--mostaza);
+    color: var(--tinta);
+}
+
+.portada-azul {
+    background: #315c73;
+    color: var(--papel);
+}
+
+.portada-negra {
+    background: var(--tinta);
+    color: var(--papel);
+}
+
+.portada-crema {
+    background: #d8c9a8;
+    color: var(--tinta);
+}
+
+.disco-info {
+    min-height: 67px;
+    padding: 10px 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 10px;
+    border-bottom: none;
+}
+
+.disco-info div {
+    display: flex;
+    flex-direction: column;
+}
+
+.disco-info strong {
+    font-family: "Anton", sans-serif;
+    font-size: 18px;
+    line-height: 1;
+    font-weight: 400;
+}
+
+.disco-info span {
+    margin-top: 5px;
+    color: var(--gris);
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.disco-info b {
+    font-size: 15px;
+    white-space: nowrap;
+}
+
+@media (max-width: 600px) {
+
+    .catalogo-intro {
+        height: 106px;
+        padding: 24px 8px 0;
+    }
+
+    .catalogo-intro h1 {
+        font-size: 41px;
+    }
+
+    .catalogo-intro p {
+        margin-top: 5px;
+        font-size: 7px;
+        line-height: 1.4;
+    }
+
+    .catalogo-section {
+        width: calc(100% - 16px);
+        margin: 28px auto 30px;
+        display: block;
+    }
+
+    .catalogo-filtros {
+        border-top: none;
+        transform: none;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+    }
+
+    .filtro-grupo {
+        border-bottom: none;
+    }
+
+    .filtro-grupo + .filtro-grupo {
+        padding-top: 10px;
+    }
+
+    .filtro-grupo h2 {
+        margin-bottom: 9px;
+        font-size: 16px;
+    }
+
+    .filtro-item {
+        min-height: 24px;
+        font-size: 9px;
+    }
+
+    .filtro-item strong {
+        font-size: 8px;
+    }
+
+    .catalogo-productos {
+        margin-top: 18px;
+    }
+
+    .catalogo-barra {
+        min-height: 27px;
+        padding-bottom: 7px;
+        border-bottom-width: 1px;
+        font-size: 8px;
+    }
+
+    .discos-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px 9px;
+        padding-top: 14px;
+    }
+
+    .portada {
+        padding: 0;
+        border-width: 1px;
+    }
+
+    .portada h3 {
+        font-size: 17px;
+    }
+
+    .portada span {
+        margin-top: 7px;
+        font-size: 4.5px;
+        letter-spacing: 0.5px;
+    }
+
+    .disco-info {
+        min-height: 45px;
+        padding: 6px 0;
+        gap: 5px;
+        border-bottom-width: none;
+    }
+
+    .disco-info strong {
+        font-size: 7px;
+    }
+
+    .disco-info span {
+        margin-top: 3px;
+        font-size: 6px;
+    }
+
+    .disco-info b {
+        font-size: 7px;
+    }
+}
