@@ -1,0 +1,593 @@
+:root {
+    --papel: #f2ebdd;
+    --tinta: #1c1a17;
+    --gris: #6b645a;
+    --rojo: #d93a27;
+    --mostaza: #e0a526;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-width: 320px;
+    background: var(--papel);
+    color: var(--tinta);
+    font-family: "Work Sans", sans-serif;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.header {
+    width: 100%;
+    height: 63px;
+    padding: 0 6.3%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--papel);
+    border-bottom: 2px solid var(--tinta);
+}
+
+.logo,
+.footer-logo {
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    letter-spacing: -1px;
+}
+
+.logo {
+    font-size: 28px;
+}
+
+.logo span,
+.footer-logo span {
+    color: var(--rojo);
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 27px;
+}
+
+.nav a {
+    position: relative;
+    font-size: 10px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.nav a.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -8px;
+    height: 2px;
+    background: var(--rojo);
+}
+
+.top-strip {
+    width: 100%;
+    height: 29px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 15px;
+    background: var(--tinta);
+    color: var(--papel);
+    font-size: 8px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.agenda-intro {
+    width: 100%;
+    height: 182px;
+    padding: 45px 6.3% 0;
+    border-bottom: 2px solid var(--tinta);
+}
+
+.agenda-intro h1 {
+    font-family: "Anton", sans-serif;
+    font-size: 73px;
+    line-height: 0.95;
+    font-weight: 400;
+    letter-spacing: -1px;
+}
+
+.agenda-intro p {
+    margin-top: 9px;
+    color: var(--gris);
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.45;
+}
+
+.featured-event {
+    width: 87.5%;
+    max-width: 1100px;
+    margin: 49px auto 39px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border: 2px solid var(--tinta);
+}
+
+.event-date {
+    min-height: 395px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--rojo);
+    text-align: center;
+}
+
+.day {
+    font-family: "Anton", sans-serif;
+    color: var(--papel);
+    font-size: 178px;
+    line-height: 0.75;
+    font-weight: 400;
+}
+
+.month {
+    margin-top: 18px;
+    font-family: "Anton", sans-serif;
+    color: var(--papel);
+    font-size: 43px;
+    line-height: 1;
+}
+
+.event-date-name {
+    margin-top: 18px;
+    color: var(--papel);
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.event-info {
+    padding: 31px 30px;
+}
+
+.event-label {
+    color: var(--rojo);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.event-info h2 {
+    margin-top: 8px;
+    font-family: "Anton", sans-serif;
+    font-size: 48px;
+    line-height: 0.96;
+    font-weight: 400;
+}
+
+.event-description {
+    margin-top: 19px;
+    color: var(--tinta);
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+.event-details {
+    margin-top: 22px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border: 2px solid var(--tinta);
+}
+
+.event-details div {
+    min-height: 52px;
+    padding: 7px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.event-details div:nth-child(1),
+.event-details div:nth-child(2) {
+    border-bottom: 2px solid var(--tinta);
+}
+
+.event-details div:nth-child(1),
+.event-details div:nth-child(3) {
+    border-right: 2px solid var(--tinta);
+}
+
+.event-details span {
+    color: var(--gris);
+    font-size: 7px;
+    font-weight: 600;
+}
+
+.event-details strong {
+    margin-top: 3px;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.reserve-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 13px 17px;
+    background: var(--tinta);
+    color: var(--papel);
+    font-size: 9px;
+    font-weight: 700;
+}
+
+.monthly-events {
+    width: 87.5%;
+    max-width: 1100px;
+    margin: 0 auto 50px;
+}
+
+.monthly-events > h2 {
+    margin-bottom: 21px;
+    font-family: "Anton", sans-serif;
+    font-size: 39px;
+    line-height: 1;
+    font-weight: 400;
+}
+
+.event-row {
+    min-height: 88px;
+    display: grid;
+    grid-template-columns: 72px 1fr 78px;
+    align-items: center;
+    gap: 18px;
+    border-top: 2px solid var(--tinta);
+}
+
+.event-row:last-child {
+    border-bottom: 2px solid var(--tinta);
+}
+
+.event-number {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.event-number strong {
+    font-family: "Anton", sans-serif;
+    font-size: 39px;
+    line-height: 0.8;
+    font-weight: 400;
+}
+
+.event-number span {
+    margin-top: 4px;
+    font-family: "Anton", sans-serif;
+    font-size: 12px;
+    line-height: 1;
+}
+
+.event-content h3 {
+    font-family: "Anton", sans-serif;
+    font-size: 22px;
+    line-height: 1;
+    font-weight: 400;
+}
+
+.event-content p {
+    margin-top: 4px;
+    color: var(--gris);
+    font-size: 9px;
+    font-weight: 600;
+}
+
+.event-price {
+    justify-self: end;
+    min-width: 76px;
+    padding: 10px 7px;
+    border: 2px solid var(--tinta);
+    text-align: center;
+    font-size: 8px;
+    font-weight: 700;
+}
+
+.footer {
+    padding: 48px 6.3% 24px;
+    background: var(--tinta);
+    color: var(--papel);
+}
+
+.footer-main {
+    display: grid;
+    grid-template-columns: 2fr 0.7fr 0.7fr 0.7fr;
+    gap: 45px;
+    padding-bottom: 42px;
+}
+
+.footer-logo {
+    font-size: 38px;
+    line-height: 1;
+}
+
+.footer-brand p {
+    margin-top: 10px;
+    color: #c2bbae;
+    font-size: 10px;
+    font-weight: 600;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footer-column h3 {
+    margin-bottom: 15px;
+    color: var(--mostaza);
+    font-size: 9px;
+    letter-spacing: 2px;
+}
+
+.footer-column a {
+    margin-bottom: 8px;
+    color: var(--papel);
+    font-size: 10px;
+    font-weight: 600;
+}
+
+.footer-bottom {
+    padding-top: 15px;
+    border-top: 1px solid #514c45;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--papel);
+    font-size: 8px;
+    font-weight: 600;
+}
+
+@media (max-width: 600px) {
+
+    .header {
+        height: 63px;
+        padding: 8px 8px 7px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 7px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .nav {
+        width: 100%;
+        justify-content: center;
+        gap: 7px 11px;
+        flex-wrap: wrap;
+    }
+
+    .nav a {
+        font-size: 6px;
+    }
+
+    .nav a.active::after {
+        bottom: -5px;
+        height: 1px;
+    }
+
+    .top-strip {
+        height: 34px;
+        padding: 4px 8px;
+        font-size: 5.5px;
+        line-height: 1.35;
+        letter-spacing: 1px;
+    }
+
+    .agenda-intro {
+        height: 106px;
+        padding: 24px 8px 0;
+    }
+
+    .agenda-intro h1 {
+        font-size: 41px;
+    }
+
+    .agenda-intro p {
+        margin-top: 5px;
+        font-size: 7px;
+        line-height: 1.4;
+    }
+
+    .desktop {
+        display: none;
+    }
+
+    .featured-event {
+        width: calc(100% - 16px);
+        margin: 29px auto 25px;
+        display: block;
+        border-width: 1px;
+    }
+
+    .event-date {
+        min-height: 145px;
+        height: 145px;
+        padding: 10px;
+    }
+
+    .day {
+        font-size: 78px;
+    }
+
+    .month {
+        margin-top: 8px;
+        font-size: 25px;
+    }
+
+    .event-date-name {
+        margin-top: 8px;
+        font-size: 6px;
+    }
+
+    .event-info {
+        padding: 13px 12px 14px;
+    }
+
+    .event-label {
+        font-size: 5.5px;
+        letter-spacing: 1px;
+    }
+
+    .event-info h2 {
+        margin-top: 5px;
+        font-size: 23px;
+        line-height: 0.95;
+    }
+
+    .event-description {
+        margin-top: 8px;
+        font-size: 6.5px;
+        line-height: 1.4;
+    }
+
+    .event-details {
+        margin-top: 10px;
+        border-width: 1px;
+    }
+
+    .event-details div {
+        min-height: 38px;
+        padding: 5px 6px;
+    }
+
+    .event-details div:nth-child(1),
+    .event-details div:nth-child(2) {
+        border-bottom-width: 1px;
+    }
+
+    .event-details div:nth-child(1),
+    .event-details div:nth-child(3) {
+        border-right-width: 1px;
+    }
+
+    .event-details span {
+        font-size: 4.5px;
+    }
+
+    .event-details strong {
+        margin-top: 2px;
+        font-size: 5.5px;
+    }
+
+    .reserve-button {
+        margin-top: 9px;
+        padding: 7px 9px;
+        font-size: 5.5px;
+    }
+
+    .monthly-events {
+        width: calc(100% - 16px);
+        margin-bottom: 28px;
+    }
+
+    .monthly-events > h2 {
+        margin-bottom: 10px;
+        font-size: 23px;
+    }
+
+    .event-row {
+        min-height: 65px;
+        grid-template-columns: 32px 1fr 42px;
+        gap: 6px;
+        border-top-width: 1px;
+    }
+
+    .event-row:last-child {
+        border-bottom-width: 1px;
+    }
+
+    .event-number strong {
+        font-size: 23px;
+    }
+
+    .event-number span {
+        margin-top: 2px;
+        font-size: 6.5px;
+    }
+
+    .event-content h3 {
+        font-size: 11.5px;
+        line-height: 1;
+    }
+
+    .event-content p {
+        margin-top: 3px;
+        color: #8c857a;
+        font-size: 5.2px;
+        line-height: 1.25;
+    }
+
+    .event-price {
+        min-width: 39px;
+        padding: 5px 2px;
+        border-width: 1px;
+        font-size: 5px;
+    }
+
+    .footer {
+        padding: 27px 8px 15px;
+    }
+
+    .footer-main {
+        display: block;
+        padding-bottom: 22px;
+    }
+
+    .footer-brand {
+        margin-bottom: 25px;
+    }
+
+    .footer-logo {
+        font-size: 28px;
+    }
+
+    .footer-brand p {
+        margin-top: 5px;
+        font-size: 6px;
+    }
+
+    .footer-column h3 {
+        margin-bottom: 8px;
+        font-size: 6px;
+    }
+
+    .footer-column a {
+        display: block;
+        margin-bottom: 6px;
+        font-size: 6px;
+    }
+
+    .footer-bottom {
+        padding-top: 10px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+        font-size: 5px;
+    }
+} 
