@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Surco - Contacto</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+       <!-- ENCABEZADO -->
+    <header class="header">
+
+        <a href="index.html" class="logo">
+            SURCO<span>.</span>
+        </a>
+
+        <nav class="nav">
+            <a href="index.html">INICIO</a>
+            <a href="catalogo.html">CATÁLOGO</a>
+            <a href="disco.html">DISCO DEL MES</a>
+            <a href="agenda.html">AGENDA</a>
+            <a href="nosotros.html">NOSOTROS</a>
+            <a href="contacto.html" class="activo">CONTACTO</a>
+        </nav>
+
+    </header>
+
+       <!-- BARRA -->
+    <div class="barra-info">
+        DISCOS NUEVOS Y USADOS · CAFÉ DE ORIGEN ·
+        MÚSICA EN VIVO CADA VIERNES
+    </div>
+
+
+    <main>
+
+          <!-- TITULO CONTACTO -->
+        <section class="contacto-intro">
+
+            <h1>CONTACTO</h1>
+
+            <p>
+                ¿Buscas un disco en particular o
+                quieres vendernos tu colección?
+                Escríbenos.
+            </p>
+
+        </section>
+
+          <!-- FORMULARIO -->
+        <section class="formulario-seccion">
+
+            <form>
+
+                <label for="nombre">NOMBRE</label>
+                <input type="text" id="nombre" name="nombre">
+
+
+                <label for="celular">CELULAR</label>
+                <input type="tel" id="celular" name="celular">
+
+
+                <label for="correo">CORREO</label>
+                <input type="email" id="correo" name="correo">
+
+
+                <label for="ayuda">¿EN QUÉ TE AYUDAMOS?</label>
+
+                <select id="ayuda" name="ayuda">
+                    <option>Busco un disco</option>
+                    <option>Quiero vender discos</option>
+                    <option>Información de la tienda</option>
+                    <option>Otro</option>
+                </select>
+
+
+                <label for="mensaje">MENSAJE</label>
+
+                <textarea id="mensaje" name="mensaje"></textarea>
+
+
+                <button type="submit" class="boton">
+                    ENVIAR
+                </button>
+
+            </form>
+
+        </section>
+
+            <!-- UBICACIÓN -->
+        <section class="ubicacion">
+
+ <!-- MAPA HECHO CON CSS -->
+            <div class="mapa">
+
+                <div class="calle calle-horizontal"></div>
+                <div class="calle calle-vertical"></div>
+
+                <div class="marcador">
+                    SURCO
+                </div>
+
+                <div class="pin"></div>
+
+                <span class="nombre-calle">
+                    CARRERA 14
+                </span>
+
+            </div>
+
+
+            <div class="direccion">
+
+                <h2>DIRECCIÓN</h2>
+
+                <p>
+                    Carrera 14 #18-32, Centro<br>
+                    Armenia, Quindío
+                </p>
+
+            </div>
+
+
+ <!-- HORARIO -->
+            <div class="horario">
+
+                <h2>HORARIO</h2>
+
+                <div class="horario-fila">
+                    <strong>Lunes a jueves</strong>
+                    <span>10:00 – 19:00</span>
+                </div>
+
+                <div class="horario-fila">
+                    <strong>Viernes y sábado</strong>
+                    <span>10:00 – 23:00</span>
+                </div>
+
+                <div class="horario-fila">
+                    <strong>Domingo</strong>
+                    <span>10:00 – 15:00</span>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+      <!-- FOOTER -->
+    <footer class="footer">
+
+        <div class="footer-logo">
+            SURCO<span>.</span>
+        </div>
+
+        <p>Discos y café desde 2014.</p>
+        <p>Carrera 14 #18-32, Armenia, Quindío.</p>
+
+
+        <div class="footer-columnas">
+
+            <div>
+                <h3>TIENDA</h3>
+                <a href="catalogo.html">Catálogo</a>
+                <a href="disco.html">Disco del mes</a>
+                <a href="agenda.html">Agenda</a>
+            </div>
+
+            <div>
+                <h3>SURCO</h3>
+                <a href="nosotros.html">Nosotros</a>
+                <a href="contacto.html">Contacto</a>
+            </div>
+
+            <div>
+                <h3>REDES</h3>
+                <a href="#">Instagram</a>
+                <a href="#">Spotify</a>
+                <a href="#">WhatsApp</a>
+            </div>
+
+        </div>
+
+
+        <div class="copyright">
+            © 2026 Surco Discos & Café<br>
+            Proyecto de práctica · ADSO SENA
+        </div>
+
+    </footer>
+
+</body>
+</html>
